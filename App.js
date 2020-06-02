@@ -4,6 +4,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
+import HomeScreen from './src/screens/HomeScreen';
+import SettingsScreen from './src/screens/SettingsScreen';
+
 function IconWithBadge({ name, badgeCount, color, size }) {
   return (
     <View style={{ width: 24, height: 24, margin: 5 }}>
@@ -35,22 +38,6 @@ function IconWithBadge({ name, badgeCount, color, size }) {
 function HomeIconWithBadge(props) {
   // You should pass down the badgeCount in some other ways like React Context API, Redux, MobX or event emitters.
   return <IconWithBadge {...props} badgeCount={3} />;
-}
-
-function HomeScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Home!</Text>
-    </View>
-  );
-}
-
-function SettingsScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Settings!</Text>
-    </View>
-  );
 }
 
 const Tab = createBottomTabNavigator();
