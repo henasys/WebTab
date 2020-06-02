@@ -1,11 +1,8 @@
 import React from 'react';
-import { WebView } from 'react-native-webview';
+import {WebView} from 'react-native-webview';
 
 export default function HomeScreen() {
   return (
-    <WebView
-      originWhitelist={['*']}
-      source={{ html: '<h1>Hello world</h1>' }}
-    />
+    <WebView source={{uri: 'https://infinite.red'}} style={{marginTop: 20}} />
   );
 }
