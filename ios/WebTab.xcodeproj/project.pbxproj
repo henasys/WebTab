@@ -19,7 +19,7 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* WebTabTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* WebTabTests.m */; };
 		2E9AA14A0010CBE123E7C629 /* libPods-WebTab-WebTabTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9095D5463D704B558971C535 /* libPods-WebTab-WebTabTests.a */; };
-		43818DE92487913A009AA3B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 43818DE82487913A009AA3B6 /* GoogleService-Info.plist */; };
+		43818DED2487D2DD009AA3B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 43818DEC2487D2DD009AA3B6 /* GoogleService-Info.plist */; };
 		A282902469BC61A8FEC653DB /* libPods-WebTab-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6345A3FC32B821D5DA788A /* libPods-WebTab-tvOS.a */; };
 /* End PBXBuildFile section */
 
@@ -56,7 +56,7 @@
 		1980CB6B8D17B9BE9678A75D /* Pods-WebTab-WebTabTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebTab-WebTabTests.release.xcconfig"; path = "Target Support Files/Pods-WebTab-WebTabTests/Pods-WebTab-WebTabTests.release.xcconfig"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* WebTab-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WebTab-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* WebTab-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WebTab-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		43818DE82487913A009AA3B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		43818DEC2487D2DD009AA3B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4B34654B64E91A61EC5947B5 /* Pods-WebTab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebTab.release.xcconfig"; path = "Target Support Files/Pods-WebTab/Pods-WebTab.release.xcconfig"; sourceTree = "<group>"; };
 		74304C442A1241DA50891F6A /* libPods-WebTab.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WebTab.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		771D2C15AC89FAB8019C9358 /* Pods-WebTab-WebTabTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebTab-WebTabTests.debug.xcconfig"; path = "Target Support Files/Pods-WebTab-WebTabTests/Pods-WebTab-WebTabTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -127,7 +127,7 @@
 		13B07FAE1A68108700A75B9A /* WebTab */ = {
 			isa = PBXGroup;
 			children = (
-				43818DE82487913A009AA3B6 /* GoogleService-Info.plist */,
+				43818DEC2487D2DD009AA3B6 /* GoogleService-Info.plist */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -353,7 +353,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-				43818DE92487913A009AA3B6 /* GoogleService-Info.plist in Resources */,
+				43818DED2487D2DD009AA3B6 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
