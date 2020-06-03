@@ -14,6 +14,11 @@ export default function App() {
     return () => (Navigator.isMountedRef.current = false);
   }, []);
   useEffect(() => {
+    messaging()
+      .subscribeToTopic('all')
+      .then(() => console.log('Subscribed to topic all!'));
+  }, []);
+  useEffect(() => {
     const unsubscribe = messaging().onMessage(async (remoteMessage) => {
       console.log('messaging().onMessage()', remoteMessage);
       Alert.alert('A new FCM message arrived!', JSON.stringify(remoteMessage));
