@@ -10,11 +10,14 @@ export default function App() {
   const [loading, setLoading] = useState(true);
   const [initialRoute, setInitialRoute] = useState('Settings');
   useEffect(() => {
+    Navigator.isMountedRef.current = true;
+    return () => (Navigator.isMountedRef.current = false);
+  }, []);
+  useEffect(() => {
     const unsubscribe = messaging().onMessage(async (remoteMessage) => {
       console.log('messaging().onMessage()', remoteMessage);
       Alert.alert('A new FCM message arrived!', JSON.stringify(remoteMessage));
     });
-
     return unsubscribe;
   }, []);
   useEffect(() => {
@@ -41,6 +44,7 @@ export default function App() {
       });
   }, []);
   if (loading) {
+    console.log('loading is true, return null', loading);
     return null;
   }
   return (
