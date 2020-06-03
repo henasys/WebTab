@@ -10,9 +10,10 @@ import HomeIconWithBadge from '../views/HomeIconWithBadge';
 
 const Tab = createBottomTabNavigator();
 
-export default function Tabs() {
+export default function Tabs({initialRouteName}) {
   return (
     <Tab.Navigator
+      initialRouteName={initialRouteName}
       screenOptions={({route}) => ({
         tabBarIcon: ({focused, color, size}) => {
           if (route.name === 'Home') {
