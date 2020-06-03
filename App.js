@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {NavigationContainer, useNavigation} from '@react-navigation/native';
+import {NavigationContainer} from '@react-navigation/native';
 import {Alert} from 'react-native';
 import messaging from '@react-native-firebase/messaging';
 
@@ -19,6 +19,13 @@ export default function App() {
   }, []);
   useEffect(() => {
     // Assume a message-notification contains a "type" property in the data payload of the screen to open
+    messaging().onNotificationOpenedApp((remoteMessage) => {
+      console.log(
+        'Notification caused app to open from background state:',
+        remoteMessage.notification,
+      );
+      Navigator.navigate(remoteMessage.data.type);
+    });
     // Check whether an initial notification is available
     messaging()
       .getInitialNotification()
@@ -32,16 +39,6 @@ export default function App() {
         }
         setLoading(false);
       });
-  }, []);
-  useEffect(() => {
-    // Assume a message-notification contains a "type" property in the data payload of the screen to open
-    messaging().onNotificationOpenedApp((remoteMessage) => {
-      console.log(
-        'Notification caused app to open from background state:',
-        remoteMessage.notification,
-      );
-      Navigator.navigate(remoteMessage.data.type);
-    });
   }, []);
   if (loading) {
     return null;
