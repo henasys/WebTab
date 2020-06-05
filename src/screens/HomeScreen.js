@@ -4,7 +4,7 @@ import {WebView} from 'react-native-webview';
 
 export default function HomeScreen() {
   return (
-    <WebView source={{uri: 'https://infinite.red'}} style={styles.webView} />
+    <WebView source={{uri: 'https://www.naver.com/'}} style={styles.webView} />
   );
 }
 
