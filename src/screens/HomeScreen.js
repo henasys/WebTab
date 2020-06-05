@@ -1,10 +1,28 @@
-import React, {useRef} from 'react';
+import React, {useState, useRef} from 'react';
 import {StyleSheet, SafeAreaView, View, Platform} from 'react-native';
+import {BackHandler} from 'react-native';
 import {WebView} from 'react-native-webview';
+import {useFocusEffect} from '@react-navigation/native';
 
 export default function HomeScreen() {
   const webview = useRef(null);
+  const [canGoBack, SetCanGoBack] = useState(false);
   const url = 'https://m.naver.com/';
+  useFocusEffect(
+    React.useCallback(() => {
+      const onBackPress = () => {
+        if (webview.current && canGoBack) {
+          webview.current.goBack();
+          return true;
+        } else {
+          return false;
+        }
+      };
+      BackHandler.addEventListener('hardwareBackPress', onBackPress);
+      return () =>
+        BackHandler.removeEventListener('hardwareBackPress', onBackPress);
+    }, [canGoBack]),
+  );
   return (
     <SafeAreaView style={styles.container}>
       <WebView
@@ -42,6 +60,8 @@ export default function HomeScreen() {
             navState.loading,
             navState.url,
           );
+          console.log(navState);
+          SetCanGoBack(navState.canGoBack);
         }}
         onFileDownload={({nativeEvent}) => {
           const {downloadUrl} = nativeEvent;
