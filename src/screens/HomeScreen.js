@@ -67,6 +67,17 @@ export default function HomeScreen() {
           const {downloadUrl} = nativeEvent;
           console.log('WebView onFileDownload', Platform.OS, downloadUrl);
           console.log(nativeEvent);
+          fetch(downloadUrl)
+            .then((response) => {
+              console.log('response', response);
+              return response.text();
+            })
+            .then((response) => {
+              console.log('responseJson', response);
+            })
+            .catch((e) => {
+              console.log('error', e);
+            });
         }}
       />
     </SafeAreaView>
