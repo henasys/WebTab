@@ -1,19 +1,20 @@
 import React from 'react';
-import {Text, View, StyleSheet, Button} from 'react-native';
+import {Text, SafeAreaView, StyleSheet, View, Button} from 'react-native';
 
 import Navigator from '../modules/navigator';
 
 export default function SettingsScreen() {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Text>Settings!</Text>
+      <View style={styles.spacer} />
       <Button
         title="go to Home"
         onPress={() => {
           Navigator.navigate('Home');
         }}
       />
-    </View>
+    </SafeAreaView>
   );
 }
 
@@ -22,5 +23,8 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  spacer: {
+    padding: 5,
   },
 });
